@@ -28,6 +28,7 @@
       "@features/*": ["src/app/features/*"],
       "@shared/*": ["src/app/shared/*"]
     },
+    "typeRoots": ["node_modules/@angular/material"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
