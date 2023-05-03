@@ -1,0 +1,35 @@
+:root {
+  /* Colors */
+  --color-primary: #3f51b5;
+  --color-secondary: #ff4081;
+
+  /* Typography */
+  --font-family-sans-serif: 'Helvetica Neue', Arial, sans-serif;
+  --font-family-monospace: 'Courier New', monospace;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+
+  /* Borders */
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+  --border-color: #dee2e6;
+
+  /* Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+  /* Transitions */
+  --transition-duration: 0.2s;
+  --transition-timing-function: ease-in-out;
+}
