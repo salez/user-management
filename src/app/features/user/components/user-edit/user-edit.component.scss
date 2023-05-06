@@ -1,0 +1,23 @@
+.form{
+  padding: var(--spacing-16);
+}
+
+.row{
+  display: flex;
+  gap: var(--spacing-16);
+}
+
+.col{
+  flex: 1;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.actions{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: var(--spacing-16);
+}

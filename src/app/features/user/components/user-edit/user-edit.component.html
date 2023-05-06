@@ -1,0 +1,115 @@
+<section>
+  <app-page-title>Usuários</app-page-title>
+  <app-page-content class="content">
+    <h2>
+      {{ isEditing ? 'Editar' : 'Novo' }} Usuário
+    </h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form mat-elevation-z8">
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Nome</mat-label> 
+            <input matInput formControlName="name" autofocus />
+            <mat-error *ngIf="userForm.controls.name.hasError('required')">
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>CPF</mat-label> 
+            <input matInput formControlName="identity" mask="000.000.000-00" />
+            <mat-error
+              *ngIf="userForm.controls['identity'].hasError('required')"
+            >
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Profissão</mat-label> 
+            <input matInput formControlName="profession" />
+            <mat-error
+              *ngIf="userForm.controls['profession'].hasError('required')"
+            >
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Data de Nascimento</mat-label>
+            <input matInput formControlName="dateOfBirth" [matDatepicker]="picker"/>
+            <mat-error
+              *ngIf="userForm.controls['dateOfBirth'].hasError('required')"
+            >
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Estado Civil</mat-label> 
+            <mat-select formControlName="maritalStatus">
+              <mat-option
+                *ngFor="let maritalStatus of MARITAL_STATUS"
+                [value]="maritalStatus"
+              >
+                {{ maritalStatus }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="userForm.controls['state'].hasError('required')">
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>UF</mat-label> 
+            <mat-select formControlName="state">
+              <mat-option
+                *ngFor="let state of STATES"
+                [value]="state.abbreviation"
+              >
+                {{ state.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="userForm.controls['state'].hasError('required')">
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Cidade</mat-label> 
+            <mat-select  formControlName="city">
+              <mat-option
+                *ngFor="let city of CITIES"
+                [value]="city.abbreviation"
+              >
+                {{ city.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="userForm.controls['state'].hasError('required')">
+              Campo <strong>obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button mat-raised-button [routerLink]="['/users']" type="button">Cancelar</button>
+        <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit">
+          {{ isEditing ? 'Salvar' : 'Incluir' }}
+        </button>
+      </div>
+    </form>
+  </app-page-content>
+</section>

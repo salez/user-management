@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Visualizar Usuário</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="user | async; let user">
+    <mat-card>
+      <mat-card-content>
+        <p><strong>Nome:</strong> {{ user.name }}</p>
+        <p><strong>CPF:</strong> {{ user.identity }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Data de Nascimento:</strong> {{ user.dateOfBirth }}</p>
+        <p><strong>Estado Civil:</strong> {{ user.maritalStatus }}</p>
+        <p><strong>Endereço:</strong> {{ user.city }}, {{ user.state }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+</div>
