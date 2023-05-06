@@ -1,0 +1,7 @@
+<form [formGroup]="searchForm">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <input [placeholder]="placeholder" matInput formControlName="search" (keyup.enter)="forceSearch()" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <form></form>
+</form>
