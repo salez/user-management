@@ -1,12 +1,17 @@
 import { inject } from "@angular/core";
 import { CanMatchFn, Router } from "@angular/router";
 import { AuthService } from "@core/auth/services/auth.service";
-import { map } from "rxjs";
+import { catchError, map, of } from "rxjs";
 
 export const canMatchLoggedIn: CanMatchFn =
   () => {
     const router = inject(Router);
     return inject(AuthService).isLoggedIn$.pipe(
-      map(isLoggedIn => isLoggedIn || router.createUrlTree(['/login']))
+      map(isLoggedIn => isLoggedIn || router.createUrlTree(['/login'])),
+      catchError(() => {
+        console.log('ERRORRR');
+        
+        return of(router.createUrlTree(['/login']));
+      })
     );
   };

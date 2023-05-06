@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  background-color: var(--color-primary);
 }
 
 .login-form{
@@ -29,9 +30,15 @@
 
   > mat-card-actions{
     padding: var(--spacing-16);
+    justify-content: center;
   }
 
-  > .enter-button{
-    width: 100px;
+  .enter-button{
+    width: 200px;
+    max-width: 100%;
+  }
+
+  .showPassword{
+    cursor: pointer;
   }
 }

@@ -8,45 +8,62 @@
         <mat-label>E-mail</mat-label>
         <input
           id="inputLogin"
-          required=""
           autofocus
           matInput
           formControlName="email"
         />
-        <mat-error>E-mail inválido</mat-error>
+        <mat-error>
+          <ng-container *ngIf="loginForm.controls.email.hasError('required')">
+            E-mail é obrigatório
+          </ng-container>
+          <ng-container *ngIf="loginForm.controls.email.hasError('email')">
+            E-mail inválido
+          </ng-container>
+        </mat-error>
       </mat-form-field>
       <mat-form-field class="field" appearance="outline">
         <mat-label>Senha</mat-label>
         <input
-          [type]="showPassword ? 'text' : 'password'"
+          [type]="showPassword() ? 'text' : 'password'"
           matInput
           formControlName="password"
         />
         <mat-icon
           matSuffix
           class="showPassword"
-          *ngIf="!showPassword"
-          (click)="showPassword = true"
+          *ngIf="showPassword()"
+          (click)="showPassword.set(false)"
           color="primary"
           >visibility</mat-icon
         >
         <mat-icon
           matSuffix
           class="showPassword"
-          *ngIf="showPassword"
-          (click)="showPassword = false"
+          *ngIf="!showPassword()"
+          (click)="showPassword.set(true);"
           color="primary"
           >visibility_off</mat-icon
         >
-        <mat-error>Senha obrigatória</mat-error>
+        <mat-error>
+          <ng-container *ngIf="loginForm.controls.password.hasError('required')">
+            Este campo é obrigatório
+          </ng-container>
+          <ng-container *ngIf="loginForm.controls.password.hasError('maxlength')">
+            Senha inválida
+          </ng-container>
+        </mat-error>
       </mat-form-field>
     </mat-card-content>
-    <mat-card-actions align="end">
+    <mat-error align="center" *ngIf="loginError$ | async">
+      E-mail ou senha inválidos
+    </mat-error>
+    <mat-card-actions>
       <button
         class="enter-button"
         mat-raised-button
         color="primary"
         [disabled]="!loginForm.valid"
+        (click)="login()"
       >
         Entrar
       </button>
