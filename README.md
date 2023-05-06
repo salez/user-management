@@ -1,27 +1,36 @@
-# UsersManagement
+# Projeto Angular 16
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+Este é um projeto desenvolvido com o Angular 16, utilizando os componentes standalone e os recursos mais recentes disponíveis na plataforma, além do uso do JSON Server para simular dados e do Angular Material para a interface.
 
-## Development server
+## Objetivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O objetivo deste projeto é demonstrar o uso avançado do Angular 16, utilizando seus recursos mais recentes e componentes standalone, junto ao JSON Server e ao Angular Material, para criar uma aplicação web robusta e eficiente.
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este projeto inclui diversas funcionalidades avançadas, tais como:
 
-## Build
+- Uso extensivo dos componentes standalone do Angular;
+- Utilização do JSON Server para simular dados;
+- Interface desenvolvida com o Angular Material;
+- Uso de FormGroup para validação de formulários;
+- Filtro reativo com operadores do RXJS;
+- Navegação de tabela;
+- Notificações ao criar um novo usuário;
+- Modal de confirmação para exclusão de usuário;
+- Criação de interfaces e enums para melhor organização do código.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instruções de Uso
 
-## Running unit tests
+1. Clone este repositório em sua máquina local.
+2. Execute `npm install` para instalar as dependências.
+3. Execute `ng serve` para iniciar o servidor de desenvolvimento.
+4. Execute `json-server --watch db.json` para iniciar o JSON Server.
+5. Abra o navegador e acesse `http://localhost:4200` para acessar a aplicação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tecnologias Utilizadas
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular 16
+- Angular Material
+- JSON Server
+- RXJS
