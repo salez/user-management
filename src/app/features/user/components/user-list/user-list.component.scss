@@ -1,3 +1,27 @@
 .full-width-table {
   width: 100%;
 }
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.filter{
+  display: flex;
+  justify-content: end;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.mat-column-actions {
+  width: 200px;
+  text-align: right;
+  justify-content: flex-end;
+  font-weight: bold;
+}

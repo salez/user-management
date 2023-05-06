@@ -1,0 +1,9 @@
+header{
+  border-bottom: 2px solid var(--border-color);
+}
+
+h1{
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+  padding: var(--spacing-16);
+}
