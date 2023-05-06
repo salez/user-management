@@ -27,13 +27,15 @@ Este projeto inclui diversas funcionalidades avançadas, tais como:
 
 ## Para realizar o primeiro login
 
-usuário admin: 
-user: admin@teste.com
-pass: teste
+### usuário admin: 
 
-usuário comum:
-user: usuario@teste.com
-pass: teste
+- user: admin@teste.com
+- pass: teste
+
+### usuário comum:
+
+- user: usuario@teste.com
+- pass: teste
 
 ## Instruções de Uso
 
