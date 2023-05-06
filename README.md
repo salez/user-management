@@ -20,7 +20,7 @@ Este projeto inclui diversas funcionalidades avançadas, tais como:
 - Modal de confirmação para exclusão de usuário;
 - Utilização do Lazy Loading para melhor carregamento
 - Separação do código em features (Clean Architeture)
-- Codificação reativa em observância aos melhores práticas (Clean Code, SOLID)
+- Codificação reativa em observância as melhores práticas (Clean Code, SOLID)
 - Criação de interfaces e enums para melhor organização do código.
 
 ## Observações
