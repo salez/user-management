@@ -32,8 +32,10 @@ export class AuthService {
 
   private checkIfUserIsAuthenticated() {
     const userToken = this.getUserTokenFromStorage();
-    if (!userToken)
+    if (!userToken){
+      this.userAuthenticated$.next(null);
       return;
+    }
 
     this.userService.getUserByToken(userToken)
       .subscribe({

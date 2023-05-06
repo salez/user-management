@@ -9,8 +9,6 @@ export const canMatchLoggedIn: CanMatchFn =
     return inject(AuthService).isLoggedIn$.pipe(
       map(isLoggedIn => isLoggedIn || router.createUrlTree(['/login'])),
       catchError(() => {
-        console.log('ERRORRR');
-        
         return of(router.createUrlTree(['/login']));
       })
     );
