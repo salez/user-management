@@ -18,11 +18,14 @@ Este projeto inclui diversas funcionalidades avançadas, tais como:
 - Navegação de tabela;
 - Notificações ao criar um novo usuário;
 - Modal de confirmação para exclusão de usuário;
+- Utilização do Lazy Loading para melhor carregamento
+- Separação do código em features (Clean Architeture)
+- Codificação reativa em observância aos melhores práticas (Clean Code, SOLID)
 - Criação de interfaces e enums para melhor organização do código.
 
 ## Observações
 
-- Este projeto não possui foco em testes unitários e tratamento de erros, sendo feito apenas o básico para garantir as funcionalidades.
+- Este projeto não possui foco em testes unitários e tratamento de erros (principalmente vindo da api Fake), sendo feito apenas o básico na verificação se o usuário já tinha uma sessão antes através de um token fake armazenado no localStorage.
 - Os usuários são separados por roles 'admin' e 'user', onde 'admin' pode editar e visualizar e 'user' pode apenas visualizar dados.
 
 ## Para realizar o primeiro login
